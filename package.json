@@ -1,0 +1,19 @@
+{
+  "name": "stripe-create-checkout-session",
+  "version": "1.0.0",
+  "description": "Stripe payment handler for NodeJS",
+  "main": "app.js",
+  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
+  "author": "SAM CLI",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.889.0",
+    "stripe": "^8.144.0"
+  },
+  "scripts": {
+    "test": "mocha tests/unit/",
+    "deploy_lambda": "zip -r lambdaFunc.zip . && aws lambda update-function-code --function-name stripe-create-checkout-session --zip-file fileb://lambdaFunc.zip --profile personal --region us-east-1"
+  },
+  "devDependencies": {
+  }
+}
